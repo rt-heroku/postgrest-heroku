@@ -89,7 +89,7 @@ EOF
 else
   cat <<EOF > $BUILD_DIR/Procfile
 #web: ./${BIN} "postgres://$AUTH_ROLE:$AUTH_PASS@$DB_HOST:$DB_PORT/$DB_NAME" -p \$PORT -a \$ANONYMOUS_ROLE --pool \$DB_POOL --jwt-secret \$JWT_SECRET --schema \$SCHEMA
-web: ./${BIN} "postgres://$DATABASE_URL -a \$ANONYMOUS_ROLE --pool \$DB_POOL --jwt-secret \$JWT_SECRET --schema \$SCHEMA
+web: ./${BIN} "postgres://$DATABASE_URL -a \$ANONYMOUS_ROLE --pool \$DB_POOL --jwt-secret \$JWT_SECRET --schema \$SCHEMA"
 EOF
 fi
 
